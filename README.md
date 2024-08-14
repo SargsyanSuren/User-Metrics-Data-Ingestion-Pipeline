@@ -28,7 +28,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone [<repository-url>](https://github.com/SargsyanSuren/User-Metrics-Data-Ingestion-Pipeline.git)
+   git clone https://github.com/SargsyanSuren/User-Metrics-Data-Ingestion-Pipeline.git
    cd user-metrics-pipeline
    ```
 2. Build and Run the Containers:
