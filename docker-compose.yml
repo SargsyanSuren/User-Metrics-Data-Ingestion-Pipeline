@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: user_metrics
+    ports:
+      - "5432:5432"
+
+  app:
+    build: ./app
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://user:password@db:5432/user_metrics
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
