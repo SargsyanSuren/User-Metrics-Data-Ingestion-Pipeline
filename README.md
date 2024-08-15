@@ -43,13 +43,6 @@ Before you begin, ensure you have the following installed:
     ```bash
     docker exec -it user-metrics-pipeline-db-1 psql -U user -d user_metrics
     ```
-# Database Schema
-
-   The database contains a single table user_metrics designed to store various types of user metrics. The table schema is as follows:
-
-## Database Schema
-
-The database contains a single table `user_metrics` designed to store various types of user metrics. The table schema is as follows:
 
 ## Database Schema
 
